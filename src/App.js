@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MeuComponente from './MeuComponente';
 import logo from './logo.svg';
 import './App.css';
 
@@ -116,6 +117,16 @@ class App extends Component {
           <div onClick={this.clicouCliqueMe}>Clique Me</div>
         </div>
         /*SetState - FIM*/
+
+        /*MeuComponente*/
+        <MeuComponente 
+          /*passando o props*/
+          propTitulo="Esse é o título"
+          propNome="Esse é o nome"
+          propClicou={this.clicouCliqueMe}
+          /*passando o props - FIM*/
+        />
+        /*MeuComponente - FIM*/
       </div>
     );
   }
