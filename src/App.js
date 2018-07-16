@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MeuComponente from './MeuComponente';
+import MeuComponenteInput from './MeuComponenteInput';
 import logo from './logo.svg';
 import './App.css';
 
@@ -58,6 +59,8 @@ class App extends Component {
     });
   }
 /*SetState - FIM*/      
+
+
 
   render() {
     let nome = 'Kiyoshi';
@@ -129,6 +132,10 @@ class App extends Component {
           /*passando o props - FIM*/
         />
         /*MeuComponente - FIM*/
+
+        /*MeuComponenteInput*/
+        <MeuComponenteInput />
+        /*MeuComponenteInput - FIM*/
       </div>
     );
   }
