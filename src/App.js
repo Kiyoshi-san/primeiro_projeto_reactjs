@@ -30,7 +30,8 @@ class App extends Component {
 
       /*State*/
         this.state = {
-          titulo: 'Titulo da Aplicação'
+          stateTitulo: 'Titulo da Aplicação',
+          stateNome: 'Nome inicial'
         };
       /*State - FIM*/
 
@@ -52,7 +53,8 @@ class App extends Component {
 /*SetState*/      
   clicouCliqueMe(){
     this.setState({
-      titulo:"Novo Titulo da app"
+      stateTitulo:"Novo Titulo da app",
+      stateNome:"Novo nome"
     });
   }
 /*SetState - FIM*/      
@@ -106,14 +108,14 @@ class App extends Component {
         /*State*/
           <div>
             <h1>
-              {this.state.titulo}
+              {this.state.stateTitulo}
             </h1>
           </div>
         /*State -  FIM*/
 
         /*SetState*/
         <div>
-          <h1>{this.state.titulo}</h1>
+          <h1>{this.state.stateTitulo}</h1>
           <div onClick={this.clicouCliqueMe}>Clique Me</div>
         </div>
         /*SetState - FIM*/
@@ -121,8 +123,8 @@ class App extends Component {
         /*MeuComponente*/
         <MeuComponente 
           /*passando o props*/
-          propTitulo="Esse é o título"
-          propNome="Esse é o nome"
+          propTitulo={this.state.stateTitulo}
+          propNome={this.state.stateNome}
           propClicou={this.clicouCliqueMe}
           /*passando o props - FIM*/
         />
